@@ -1,2 +1,3 @@
 # myRaytacer
-my Raytracing in one weekend raytracer
+My simple Raytracer.
+Made by following Raytracing in One Weekend series
