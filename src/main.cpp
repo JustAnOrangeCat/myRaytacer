@@ -251,7 +251,7 @@ int main()
     auto start_time = std::chrono::high_resolution_clock::now();
 
     //RUN program
-    earth();
+    three_sphere();
 
     
     auto end_time = std::chrono::high_resolution_clock::now();
