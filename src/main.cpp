@@ -19,24 +19,20 @@ void three_sphere()
     auto ground_material = make_shared<lambertian>(color(0.5,0.5,0.5));
     world.add(make_shared<sphere>(point3(0,-1000,0), 1000, ground_material));
 
-    //CENTER
-    //
-    //world.add(make_shared<sphere>(point3(0,1,0),1,make_shared<lambertian>(checker)));
+    //LEFT 
+    auto diffused_mat_red = make_shared<metal>(color(2,0,0), 0.6);
+    world.add(make_shared<sphere>(point3(0,1,2),1,diffused_mat_red));
 
-    // //LEFT 
-    // auto diffused_mat_red = make_shared<metal>(color(2,0,0), 0.6);
-    // world.add(make_shared<sphere>(point3(0,1,2),1,diffused_mat_red));
-
-    // //RIGHT
-    // auto diffused_mat_green = make_shared<lambertian>(color(0,2,0));
-    // world.add(make_shared<sphere>(point3(0,1,-2),1,diffused_mat_green));
+    //RIGHT
+    auto diffused_mat_green = make_shared<lambertian>(color(0,2,0));
+    world.add(make_shared<sphere>(point3(0,1,-2),1,diffused_mat_green));
 
     world = hittable_list(make_shared<bvh_node>(world));
 
     camera cam;
 
     cam.aspect_ratio = 16.0/9.0;
-    cam.image_width = 400; 
+    cam.image_width = 800; 
     cam.sample_per_pixel = 50;
     cam.max_depth = 50;
     cam.background = color(0.7, 0.8, 1.0);
@@ -251,7 +247,7 @@ int main()
     auto start_time = std::chrono::high_resolution_clock::now();
 
     //RUN program
-    earth();
+    simple_light();
 
     
     auto end_time = std::chrono::high_resolution_clock::now();
