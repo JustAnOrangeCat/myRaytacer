@@ -3,10 +3,10 @@ my Raytracing in one weekend Raytracer. It is a single core raytracer that ouput
 
 # Requirements
 CMake v3.10 Above 
-[text](https://cmake.org/download/)
+[Cmake.org](https://cmake.org/download/)
 
 # Online PPM Viewer
-[text](https://www.cs.rhodes.edu/welshc/COMP141_F16/ppmReader.html)
+[ppmReader](https://www.cs.rhodes.edu/welshc/COMP141_F16/ppmReader.html)
 
 # Build Intructions
 cmake --build . --target Raytracing.exe
